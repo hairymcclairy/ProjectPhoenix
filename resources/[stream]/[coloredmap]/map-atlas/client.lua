@@ -12,7 +12,7 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-		Citizen.Wait(1)
+		Citizen.Wait(0) -- 1 makes it tweak, constant zoom in and out
 		if IsPedOnFoot(PlayerPedId()) then 
 			SetRadarZoom(1100)
 		elseif IsPedInAnyVehicle(PlayerPedId(), true) then
